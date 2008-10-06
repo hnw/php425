@@ -21,10 +21,10 @@ class phpParserPluginStrrpos extends phpParserPlugin
         $parameters = array();
         while (count($tmp_nodes) >= 3) {
             $parameters[] =& $tmp_nodes[2];
-            array_unshift($parameters, &$tmp_nodes[2]);
+            array_unshift($parameters, $tmp_nodes[2]);
             $tmp_nodes =& $tmp_nodes[0]->getNodes();
         }
-        array_unshift($parameters, &$tmp_nodes[0]);
+        array_unshift($parameters, $tmp_nodes[0]);
 
         $parameter =& $parameters[1];
         $tmp_nodes =& $parameter->getNodes();

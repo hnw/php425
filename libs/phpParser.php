@@ -29,7 +29,7 @@ class phpParser
                 phpParserPlugin::checkNonTerminalCondition($nodes, $rule);
             if ($condition) {
                 call_user_func(
-                    array($class, 'execute'), &$non_terminal, &$nodes);
+                    array($class, 'execute'), $non_terminal, $nodes);
             }
         }
 
